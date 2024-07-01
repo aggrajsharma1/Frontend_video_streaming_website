@@ -22,7 +22,7 @@ async function fetchOwnerName(channelId) {
 function Explore() {
 
   const videosToExplore = useLoaderData()?.data
-  // console.log(videosToExplore);
+  console.log(videosToExplore);
 
   return (
     <>
@@ -35,7 +35,7 @@ function Explore() {
               </div>
 
               {videoDetails?.title}<br />
-              {/* {videoDetails?.owner} <br />' */}
+              {/* {videoDetails?.owner} <br /> */}
               <span className='text-sm text-zinc-400'>
                 {videoDetails?.views} views&nbsp;&bull;&nbsp;
                 {(videoDetails?.createdAt).replaceAll("-", "/").substring(0, 10)}

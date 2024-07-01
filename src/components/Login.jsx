@@ -3,10 +3,18 @@ import { NavLink } from 'react-router-dom'
 
 function setCookie(userResponse) {
 
+  console.log(userResponse)
+
   const userDetails = JSON.stringify({
     userResponse
   });
+  console.log(userDetails)
+  console.log("before ",document.cookie)
+
   document.cookie = `userCookie=${encodeURIComponent(userDetails)}; path = /`;
+
+  console.log("after ",document.cookie)
+  console.log(decodeURIComponent(document.cookie))
   // document.cookie = `userCookie=${encodeURIComponent(userDetails)}; path = /users/profile`;
   // document.cookie = `userCookie=${encodeURIComponent(userDetails)}; path = /users/history`;
   // document.cookie = `userCookie=${encodeURIComponent(userDetails)}; path = /video/:videoId`;

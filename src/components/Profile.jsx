@@ -24,12 +24,13 @@ export default Profile
 
 export const userInfoLoader = async function () {
 
-  const username = getCookie()?.userResponse?.data.user.username
+  const username = getCookie()?.userResponse?.data?.user?.username
+  // console.log(username)
 
   const response = await fetch(`http://localhost:8000/api/v1/users/current-user`, {
     method: "GET",
     headers: {
-      "Authorization": `Bearer ${getCookie()?.userResponse.data.accessToken}`,
+      "Authorization": `Bearer ${getCookie()?.userResponse?.data?.accessToken}`,
       "Content-Type": "application/json"
     },
     credentials: "include"

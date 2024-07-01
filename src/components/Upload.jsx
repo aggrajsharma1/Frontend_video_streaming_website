@@ -33,8 +33,9 @@ function Upload() {
       method: "POST",
       body: formData
     })
+      .then(res => res.json())
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           setUploadMessage("Video Uploaded successfully")
           setIsVideoUploading(false)
         }

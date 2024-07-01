@@ -153,7 +153,8 @@ function Header() {
 
           <NavLink
             onClick={optimizedLogout}
-            to={`${isUserLoggedOut ? "/users/history" : "/"}`}
+            // to={`${isUserLoggedOut ? "/users/history" : "/"}`}
+            to="/"
             className='logoutButton hover:bg-zinc-100 hover:text-zinc-900 px-3 rounded-sm'
 
           >

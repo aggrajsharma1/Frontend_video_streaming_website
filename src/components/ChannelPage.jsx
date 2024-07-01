@@ -76,7 +76,7 @@ function ChannelPage() {
   }, [])
 
   return (
-    <div className='mainContainer w-full bg-zinc-900 h-screen'>
+    <div className='mainContainer w-full bg-zinc-900 min-h-screen'>
 
       <div className="coverImage w-full h-[30vh] bg-zinc-800 object-fill object-top overflow-hidden">
         <img src={channelDetails?.data?.coverImage} alt="" />
@@ -113,7 +113,7 @@ function ChannelPage() {
 
       {/* Channel Details - Videos */}
 
-      <div className='w-full p-2 flex gap-4'>
+      <div className='w-full p-2 flex flex-wrap gap-4'>
         {
           channelDetails?.data?.videos?.map((videoDetails, index) => (
             <NavLink
